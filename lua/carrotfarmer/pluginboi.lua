@@ -54,5 +54,14 @@ require("lazy").setup({
     { 'L3MON4D3/LuaSnip' },
     { "github/copilot.vim" },
 
+    -- for commenting
+    { 'numToStr/Comment.nvim',            opts = {} },
+
     require("carrotfarmer.autofmt")
 })
+
+-- Comment.nvim remaps
+local comment_api = require("Comment.api")
+
+vim.keymap.set('n', '<leader>/', comment_api.toggle.linewise.current, { desc = '[/] Comment line' })
+vim.keymap.set('v', '<leader>/b', comment_api.toggle.blockwise.current, { desc = '[b] Comment block' })
