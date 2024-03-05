@@ -17,6 +17,18 @@ require("lazy").setup({
         tag = '0.1.5',
         dependencies = { 'nvim-lua/plenary.nvim' }
     },
+    {
+        "nvim-telescope/telescope-file-browser.nvim",
+        dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+        config = function()
+            vim.keymap.set(
+                "n",
+                "<leader>b",
+                ":Telescope file_browser path=%:p:h select_buffer=true<CR>",
+                { noremap = true, desc = "Open File Explorer" }
+            )
+        end
+    },
     { 'rose-pine/neovim',                name = 'rose-pine' },
     { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
     { "ThePrimeagen/harpoon" },
