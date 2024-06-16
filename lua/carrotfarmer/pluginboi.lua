@@ -53,9 +53,14 @@ require("lazy").setup({
     { 'hrsh7th/nvim-cmp' },
     { 'L3MON4D3/LuaSnip' },
     { "github/copilot.vim" },
+    { 'RaafatTurki/hex.nvim' },
 
     -- for commenting
     { 'numToStr/Comment.nvim',            opts = {} },
+
+
+    { 'wakatime/vim-wakatime',            lazy = false },
+
 
     require("carrotfarmer.autofmt")
 })
