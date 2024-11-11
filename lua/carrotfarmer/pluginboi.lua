@@ -29,7 +29,13 @@ require("lazy").setup({
             )
         end
     },
+
+    -- THEMES
     { 'rose-pine/neovim',                name = 'rose-pine' },
+    "felipeagc/fleet-theme-nvim",
+    "blazkowolf/gruber-darker.nvim",
+
+
     { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
     { "ThePrimeagen/harpoon" },
     { "tpope/vim-fugitive" },
@@ -44,6 +50,8 @@ require("lazy").setup({
         }
     },
 
+    { "mfussenegger/nvim-dap" },
+
     -- lsp stuff
     { 'williamboman/mason.nvim' },
     { 'williamboman/mason-lspconfig.nvim' },
@@ -54,12 +62,14 @@ require("lazy").setup({
     { 'L3MON4D3/LuaSnip' },
     { "github/copilot.vim" },
     { 'RaafatTurki/hex.nvim' },
+    { 'mfussenegger/nvim-jdtls' },
 
     -- for commenting
     { 'numToStr/Comment.nvim',            opts = {} },
 
 
     { 'wakatime/vim-wakatime',            lazy = false },
+    { 'ThePrimeagen/vim-be-good' },
 
 
     require("carrotfarmer.autofmt")

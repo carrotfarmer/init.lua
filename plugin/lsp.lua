@@ -2,10 +2,12 @@ local lsp = require("lsp-zero")
 
 lsp.preset("recommended")
 
+require('lspconfig').jdtls.setup({})
+
 -- mason setup
 require('mason').setup({})
 require('mason-lspconfig').setup({
-    ensure_installed = { "lua_ls", "tsserver", "rust_analyzer", "eslint" },
+    ensure_installed = { "lua_ls", "tsserver", "rust_analyzer", "eslint", "jdtls" },
     handlers = {
         lsp.default_setup,
     },
